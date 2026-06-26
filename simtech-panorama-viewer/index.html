@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#08294a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SIMTeCH 360" />
+    <title>SIMTeCH Medical College Simulation Lab - Interactive 3D View</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-label="SIMTeCH 360 degree panorama viewer">
+      <canvas id="viewer" aria-label="Interactive 360 degree panorama"></canvas>
+
+      <header class="brand-panel">
+        <div class="brand-mark" aria-hidden="true">
+          <span>ST</span>
+        </div>
+        <div>
+          <p class="kicker">NEST-BD / SIMTeCH</p>
+          <h1>SIMTeCH Medical College Simulation Lab - Interactive 3D View</h1>
+        </div>
+      </header>
+
+      <section class="help-panel" aria-label="How to explore">
+        <h2>How to Explore</h2>
+        <p>Drag to look around</p>
+        <p>Scroll or pinch to zoom</p>
+        <p>Select hotspots for details</p>
+      </section>
+
+      <div class="action-stack" aria-label="Application actions">
+        <button id="installApp" class="install-button" type="button">Install / Add to Home Screen</button>
+        <button id="resetView" class="reset-button" type="button">Reset View</button>
+      </div>
+
+      <section id="qrCard" class="qr-card" aria-label="Presentation sharing QR code">
+        <div class="qr-placeholder" aria-hidden="true">
+          <span>QR</span>
+        </div>
+        <div>
+          <h2>Share Web Link</h2>
+          <p>Place QR code here for presentations.</p>
+        </div>
+      </section>
+
+      <aside id="infoCard" class="info-card" aria-live="polite" aria-hidden="true">
+        <button id="closeInfo" class="close-button" type="button" aria-label="Close information panel">x</button>
+        <p id="infoNumber" class="info-number"></p>
+        <h2 id="infoTitle"></h2>
+        <p id="infoText"></p>
+      </aside>
+
+      <div class="instruction-pill">Click the numbered hotspots to learn more</div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
